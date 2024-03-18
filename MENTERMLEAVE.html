@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M ENTER & M LEAVE </title>
+</head>
+<body>
+    <script> 
+    const div1 = document.createElement('div'); // Produces a new div element & stores variable of div1 
+    div1.id = 'div1'; // Sets the ID , this ID can be utilize to target items . 
+    div1.style.width = '300px'; // Width Setting 
+    div1.style.height= '200px'; // Height Setting 
+    div1.style.backgroundColor='pink'; // Background color 
+    div1.style.color='black'; // Text Color 
+    div1.style.fontSize='20px'; // Font Size Setting
+    div1.textContent='Place Cursor here!' ; // Text w/in div 
+    document.body.appendChild(div1); // Appends the div1 to the subjective of HTML doc. This present div on the webpage. 
+
+    //Adding event listener for mouse enter. 
+    div1.addEventListener('mouseenter', () => // Attaching event listener to div1  ; this partakes when the cursor touches div1 objective. 
+    {
+        //Object ; when cursor is placed, the objective changes it background color 
+
+        
+        div1.style.backgroundColor = 'orange';  // when hovers : background turns orange
+        div1.style.color = 'black'; // the font color will stay the same for visible purposes: black. 
+        div1.style.fontSize='30px'; // the font increases when hovered. 
+
+    }
+    ); 
+
+    div1.addEventListener('mouseleave' , () =>
+    {
+        //Back to the previous when cursor removes itself 
+
+        div1.style.backgroundColor = 'pink';  // When the cursor leaves the objective, it will return to its original placement & design. 
+        div1.style.color = 'black'; 
+        div1.style.fontSize = '20px'; 
+
+    }
+    )
+
+    </script>
+</body>
+</html>
+
+<!--Use addEventListener for all events
+
+ 
+
+1. Add a div (div1) to the page. style it . give it width and height, backcolor  ,color and fontSize
+
+2. apply the addEventListener to tie this div to the mouseenter and mouseleave
+
+3. when the mouse enters the div area, the div new backgroundColor is set to the previous div color, the div new color is set to the previous backgroundColor and the fontSize is increased
+
+4 When the mouse leaves the div area, the div gets back to its initial backgroundColor, color and fontSize-->
